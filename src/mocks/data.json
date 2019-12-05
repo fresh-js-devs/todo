@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "checked": false,
+      "itemTitle": "Send report to Frank"
+    },
+    {
+      "id": 2,
+      "checked": true,
+      "itemTitle": "Schedule time with Stacy"
+    },
+    {
+      "id": 3,
+      "checked": false,
+      "itemTitle": "Create brief for the team"
+    },
+    {
+      "id": 4,
+      "checked": true,
+      "itemTitle": "Finish presentation"
+    },
+    {
+      "id": 5,
+      "checked": false,
+      "itemTitle": "Prepare vision workshop"
+    }
+  ]
+  
