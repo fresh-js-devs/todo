@@ -1,28 +1,28 @@
 [
     {
       "id": 1,
-      "checked": false,
-      "itemTitle": "Send report to Frank"
+      "itemTitle": "Send report to Frank",
+      "deadline": "2015-01-01 23:00"
     },
     {
       "id": 2,
-      "checked": true,
-      "itemTitle": "Schedule time with Stacy"
+      "itemTitle": "Schedule time with Stacy",
+      "deadline": "2016-02-02 22:00"
     },
     {
       "id": 3,
-      "checked": false,
-      "itemTitle": "Create brief for the team"
+      "itemTitle": "Create brief for the team",
+      "deadline": "2017-03-03 21:00"
     },
     {
       "id": 4,
-      "checked": true,
-      "itemTitle": "Finish presentation"
+      "itemTitle": "Finish presentation",
+      "deadline": "2018-04-04 20:00"
     },
     {
       "id": 5,
-      "checked": false,
-      "itemTitle": "Prepare vision workshop"
+      "itemTitle": "Prepare vision workshop",
+      "deadline": "2019-05-05 19:00"
     }
   ]
   
