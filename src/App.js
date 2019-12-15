@@ -57,8 +57,13 @@ const App = () => {
     return <Task Title={Title} Description={Description} />;
   });
 
-  const addTask = () => {
-    
+  const addWorkTask = () => {
+    const newWorkTask = {
+      title: Title,
+      description: Description,
+      id: workTasks.length +1
+    }
+    setWorkTasks([newWorkTask, ...workTasks])
   }
   return (
     <PageLayoutWrapper>
