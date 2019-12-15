@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { Typography } from 'antd';
+const { Paragraph } = Typography;
 
 const TaskWrap = styled.div({
     width: "80%",
@@ -12,11 +14,18 @@ const TaskWrap = styled.div({
    
 })
 
-const Task = ({Title, Description}) => {
+
+
+const Task = ({Title, Description, setEditable}) => {
+   
+      
     return (
          <TaskWrap>
              {Title}
-                {Description}
+             
+                
+                <Paragraph editable={{ onChange: setEditable }}>{Description}</Paragraph>
+                
     </TaskWrap>
     )   
 }

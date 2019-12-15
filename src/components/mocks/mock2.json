@@ -1,27 +1,27 @@
 [
     {
         "id": 1,
-        "Title": "1",
-        "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Nulla quis diam. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nam quis nulla."
+        "personalTaskTitle": "1",
+        "personalTaskDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Nulla quis diam. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nam quis nulla."
     },
     {
         "id": 2,
-        "Title": "2",
-        "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Nulla quis diam. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nam quis nulla."
+        "personalTaskTitle": "2",
+        "personalTaskDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Nulla quis diam. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nam quis nulla."
     },
     {
         "id": 3,
-        "Title": "3",
-        "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Nulla quis diam. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nam quis nulla."
+        "personalTaskTitle": "3",
+        "personalTaskDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Nulla quis diam. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nam quis nulla."
     },
     {
         "id": 4,
-        "Title": "4",
-        "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Nulla quis diam. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nam quis nulla."
+        "personalTaskTitle": "4",
+        "personalTaskDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Nulla quis diam. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nam quis nulla."
     },
     {
         "id": 5,
-        "Title": "5",
-        "Description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Nulla quis diam. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nam quis nulla."
+        "personalTaskTitle": "5",
+        "personalTaskDescription": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed ac dolor sit amet purus malesuada congue. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Nulla quis diam. Maecenas ipsum velit, consectetuer eu lobortis ut, dictum at dui. Nam quis nulla."
     }
 ]
