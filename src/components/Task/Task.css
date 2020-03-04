@@ -1,0 +1,24 @@
+.card-wrapper {
+  min-height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 5px 0 5px 25px;
+  width: 100%;
+  transition: box-shadow 300ms;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.16), 0 3px 5px rgba(0, 0, 0, 0.32);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 20px;
+}
+
+.delete-task {
+  color: red;
+  margin-top: 28px;
+  margin-right: 20px;
+  cursor: pointer;
+}
