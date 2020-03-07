@@ -13,12 +13,32 @@
 }
 
 .card-title {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .delete-task {
-  color: red;
-  margin-top: 28px;
   margin-right: 20px;
+  cursor: pointer;
+}
+
+.edit-task {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.icons-wrapper {
+  margin-top: 25px;
+}
+
+.edit-input {
+  padding: 7px;
+  margin-top: 20px;
+  margin-bottom: 18px;
+}
+
+.save-task {
+  margin-right: 20px;
+  margin-top: 23px;
+  font-size: 19px;
   cursor: pointer;
 }

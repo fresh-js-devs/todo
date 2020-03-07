@@ -4,16 +4,9 @@
   color: royalblue;
 }
 
-.add-button {
-  background: none;
-  color: royalblue;
-  border: none;
-  padding: 0;
-  margin-left: 15px;
-  font: inherit;
-  font-size: 35px;
-  cursor: pointer;
-  outline: inherit;
+.no-items {
+  text-align: center;
+  margin-top: 50px;
 }
 
 .input {
