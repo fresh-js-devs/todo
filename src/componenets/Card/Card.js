@@ -8,9 +8,9 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import DeleteIcon from "@material-ui/icons/Delete";
-import RedImg from "C:/skola/React/todolist/todo/src/images/DarkRed.jpg";
-import YellowImg from "C:/skola/React/todolist/todo/src/images/Yellow.jpg";
-import GreenImg from "C:/skola/React/todolist/todo/src/images/Green.png";
+import RedImg from "../../images/DarkRed.jpg";
+import YellowImg from "../../images/Yellow.jpg";
+import GreenImg from "../../images/Green.png";
 
 const useStyles = makeStyles({
   root: {
