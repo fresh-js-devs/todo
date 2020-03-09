@@ -1,21 +1,17 @@
 import React from 'react'
-
-// export default class TodoList extends Component {
-//     render() {
-//         return (
-//             <div>
-//                 hello from todo list
-//             </div>
-//         )
-//     }
-// }
+import TodoItem from './TodoItem'
 
 const TodoList = ({}) => {
     return(
         <div>
-                hello from todo list
+                <ul className="list-group my-5">
+                    <h2 className="text-center">Todo List</h2>
+                </ul>
+                <button type="button" className="brn btn-danger">delete all from list</button>
+                <TodoItem></TodoItem>
         </div>
+        
     );
 
 };
-export default Card;
+export default TodoList;
