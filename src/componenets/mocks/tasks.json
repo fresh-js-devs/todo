@@ -1,0 +1,8 @@
+[
+  {
+    "id": 1,
+    "name": "Welcome Task",
+    "description": "Create your own task and with help of pomodoro controll your effectivity. Select name and brief discription of one your task or project, select priority which affect color of your card, red - important, yellow - normal, green - no rush, and then start timer !",
+    "priority": 1
+  }
+]
