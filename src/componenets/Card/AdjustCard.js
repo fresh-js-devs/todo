@@ -12,7 +12,7 @@ import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
 import TextField from "@material-ui/core/TextField";
 import MenuItem from "@material-ui/core/MenuItem";
-import BlueImg from "C:/skola/React/todolist/todo/src/images/Blue.png";
+import BlueImg from "../../images/Blue.png";
 
 const useStyles = makeStyles({
   root: {

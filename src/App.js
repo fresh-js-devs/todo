@@ -11,7 +11,7 @@ import Tasks from "./componenets/mocks/tasks.json";
 import Fab from "@material-ui/core/Fab";
 import AddIcon from "@material-ui/icons/Add";
 import { useScrollTrigger } from "@material-ui/core";
-import SoundEffect from "C:/skola/React/todolist/todo/src/mp3Sounds/short.mp3";
+import SoundEffect from "./mp3Sounds/short.mp3";
 
 const renderTime = value => {
   if (value === 0) {
