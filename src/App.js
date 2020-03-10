@@ -12,10 +12,11 @@ import "./App.css";
 
 function App() {
   const [todos, setTodos] = useState(Todos);
+
   return (
     <div>
-      <TodoHeader></TodoHeader>
-      <TodoList todos={todos}></TodoList>
+      <TodoHeader todos={todos} setTodos={setTodos}></TodoHeader>
+      <TodoList todos={todos} setTodos={setTodos}></TodoList>
     </div>
   );
 }
