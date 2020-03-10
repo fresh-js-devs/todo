@@ -1,57 +1,19 @@
-import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import React from "react";
+import styled from "@emotion/styled";
 
-const TodoHeader = ({ todos, setTodos }) => {
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
+import Form from "./TodoHeaderForm";
 
-  const handleAddTodoClick = () => {
-    const newTodo = {
-      id: todos.length + 10,
-      name,
-      description
-    };
+const Wrapper = styled.div({
+  padding: "15px",
+  width: "100%",
+  transition: "box-shadow 300ms",
+  boxShadow: "0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)"
+});
 
-    setTodos([newTodo, ...todos]);
-
-    setName("");
-    setDescription("");
-
-    console.log(todos);
-  };
-
-  return (
-    <Form>
-      <Form.Group controlId="formBasicEmail">
-        <Form.Label>Title</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Gimme name"
-          value={name}
-          onChange={e => setName(e.target.value)}
-        />
-      </Form.Group>
-
-      <Form.Group controlId="exampleForm.ControlTextarea1">
-        <Form.Label>Description</Form.Label>
-        <Form.Control
-          as="textarea"
-          rows="3"
-          placeholder="Tell me what you want..."
-          value={description}
-          onChange={e => setDescription(e.target.value)}
-        />
-      </Form.Group>
-
-      <Button
-        variant="primary"
-        type="submit"
-        onClick={() => handleAddTodoClick()}
-      >
-        Add
-      </Button>
-    </Form>
-  );
+const TodoHeader = ({todos,setTodos}) => {
+  return <Wrapper>
+      <Form todos={todos} setTodos={setTodos}></Form>
+  </Wrapper>;
 };
 
 export default TodoHeader;
