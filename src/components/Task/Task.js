@@ -6,7 +6,6 @@ const Task = ({
   id,
   deleteTask,
   editing,
-  setEditing,
   editTask,
   newValue,
   setNewValue,
@@ -39,11 +38,14 @@ const Task = ({
           onChange={e => setNewValue(e.target.value)}
         ></input>
         <div className="editing-icons-wrapper">
-          <span className="save-task" onClick={() => saveEditing(newValue, id)}>
-            ✔️
-          </span>
-          <span className="cancel-task" onClick={cancelEditing}>
+          <span className="save-task" onClick={cancelEditing}>
             ❌
+          </span>
+          <span
+            className="cancel-task"
+            onClick={() => saveEditing(newValue, id)}
+          >
+            ✔️
           </span>
         </div>
       </div>

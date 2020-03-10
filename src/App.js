@@ -20,7 +20,6 @@ function App() {
         id={id}
         deleteTask={() => deleteTask(id)}
         editing={editing}
-        setEditing={setEditing}
         editTask={() => editTask(id)}
         newValue={newValue}
         setNewValue={setNewValue}
