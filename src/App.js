@@ -25,6 +25,7 @@ function App() {
         newValue={newValue}
         setNewValue={setNewValue}
         saveEditing={() => saveEditing(newValue, id)}
+        cancelEditing={cancelEditing}
       ></Task>
     ));
 
@@ -58,6 +59,14 @@ function App() {
 
     if (!newVal) return;
     oldTask.task = newVal;
+
+    setNewValue("");
+    setEditing(null);
+  };
+
+  const cancelEditing = () => {
+    setEditing(null);
+    setNewValue("");
   };
 
   return (

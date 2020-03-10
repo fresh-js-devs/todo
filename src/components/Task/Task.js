@@ -10,7 +10,8 @@ const Task = ({
   editTask,
   newValue,
   setNewValue,
-  saveEditing
+  saveEditing,
+  cancelEditing
 }) => {
   const read = () => {
     return (
@@ -37,16 +38,14 @@ const Task = ({
           name="edit"
           onChange={e => setNewValue(e.target.value)}
         ></input>
-        <span
-          className="save-task"
-          onClick={() => {
-            saveEditing(newValue, id);
-            setEditing(null);
-            setNewValue("");
-          }}
-        >
-          ✔️
-        </span>
+        <div className="editing-icons-wrapper">
+          <span className="save-task" onClick={() => saveEditing(newValue, id)}>
+            ✔️
+          </span>
+          <span className="cancel-task" onClick={cancelEditing}>
+            ❌
+          </span>
+        </div>
       </div>
     );
   };
