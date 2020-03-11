@@ -4,7 +4,10 @@ import Layout from "./components/Layout/Layout";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Task from "./components/Task/Task";
 
+import Input from "./components/atoms/Input";
+
 import tasksArray from "../src/data/tasks.json";
+import Title from "./components/atoms/Title";
 
 function App() {
   const [newTask, setNewTask] = useState("");
@@ -70,15 +73,14 @@ function App() {
 
   return (
     <Layout>
-      <h2 className="title">To-Do</h2>
+      <Title className="title">To-Do</Title>
       <Wrapper>
-        <input
+        <Input
           onChange={e => setNewTask(e.target.value)}
           value={newTask}
           name="task"
-          className="input"
           onKeyPress={addTask}
-        ></input>
+        ></Input>
       </Wrapper>
       <h2 className="task-title">Tasks</h2>
       {tasks.length === 0 ? renderNone() : renderTasks()}
