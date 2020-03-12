@@ -4,6 +4,7 @@ import { Button, Form } from "react-bootstrap";
 const TodoHeaderForm = ({ todos, setTodos }) => {
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const inputsAreEmpty = name === "" || description === "";
 
   const handleAddTodoClick = () => {
     const newTodo = {
@@ -16,8 +17,6 @@ const TodoHeaderForm = ({ todos, setTodos }) => {
 
     setName("");
     setDescription("");
-
-    console.log(todos);
   };
 
   return (
@@ -43,11 +42,7 @@ const TodoHeaderForm = ({ todos, setTodos }) => {
         />
       </Form.Group>
 
-      <Button
-        variant="primary"
-        type="submit"
-        onClick={() => handleAddTodoClick()}
-      >
+      <Button variant="primary" onClick={() => handleAddTodoClick()}  disabled={inputsAreEmpty}>
         Add
       </Button>
     </Form>
