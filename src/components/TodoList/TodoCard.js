@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import styled from "@emotion/styled";
-import { Modal, Button, Form, Alert } from "react-bootstrap";
+import { Modal, Button, Form, Alert, Card, Row, Col } from "react-bootstrap";
 
 const Wrapper = styled.div({
   minWidth: "200px",
@@ -17,6 +17,8 @@ const WrapperDone = styled.div({
 
 ///Handles each card
 const TodoCard = ({ todo, onCloseClicked, onSaveClicked, onDoneClicked }) => {
+  const now = new Date();
+  const deadline = new Date(todo.deadline);
   const [editActive, setEditActive] = useState(false);
   const [todoDone, setTodoDone] = useState(false);
   const [todoDoneDate, setTodoDoneDate] = useState();
@@ -49,25 +51,42 @@ const TodoCard = ({ todo, onCloseClicked, onSaveClicked, onDoneClicked }) => {
     return (
       <Wrapper>
         <Modal.Dialog>
-          <Modal.Header closeButton onClick={() => onCloseClicked(todo.id)}>
-            <Modal.Title>{todo.name}</Modal.Title>
-          </Modal.Header>
+          <Card
+            style={{
+              backgroundColor: deadline > now ? "white" : "rgb(248,215,218)"
+            }}
+          >
+            <Modal.Header closeButton onClick={() => onCloseClicked(todo.id)}>
+              <Modal.Title>{todo.name}</Modal.Title>
 
-          <Modal.Body>
-            <p>{todo.description}</p>
-          </Modal.Body>
+              <p style={{marginLeft: '10px'}}>Deadline: {todo.deadline}</p>
+            </Modal.Header>
 
-          <Modal.Footer>
-            <Button
-              variant="secondary"
-              onClick={() => setEditActive(!editActive)}
-            >
-              Edit
-            </Button>
-            <Button variant="primary" onClick={() => doneClicked()}>
-              Mark as Done
-            </Button>
-          </Modal.Footer>
+            <Modal.Body>
+              <p>{todo.description}</p>
+            </Modal.Body>
+
+            <Modal.Footer>
+              <Row>
+                <Col>
+                  <h3>{deadline > now ? "" : "After deadline!"}</h3>
+                </Col>
+                <Col xs={3}>
+                  <Button
+                    variant="secondary"
+                    onClick={() => setEditActive(!editActive)}
+                  >
+                    Edit
+                  </Button>
+                </Col>
+                <Col xs={4}>
+                  <Button variant="primary" onClick={() => doneClicked()}>
+                    Mark as Done
+                  </Button>
+                </Col>
+              </Row>
+            </Modal.Footer>
+          </Card>
         </Modal.Dialog>
       </Wrapper>
     );

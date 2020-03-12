@@ -1,22 +1,27 @@
 import React, { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, Col } from "react-bootstrap";
 
 const TodoHeaderForm = ({ todos, setTodos }) => {
+  const date = new Date();
   const [name, setName] = useState("");
   const [description, setDescription] = useState("");
+  const [deadline, setDeadline] = useState(date);
   const inputsAreEmpty = name === "" || description === "";
 
   const handleAddTodoClick = () => {
+    console.log(deadline);
     const newTodo = {
       id: todos.length + 10,
       name,
-      description
+      description,
+      deadline: `${deadline.getDay()}.${deadline.getMonth()} ${deadline.getFullYear()}`
     };
 
     setTodos([newTodo, ...todos]);
 
     setName("");
     setDescription("");
+    setDeadline(date);
   };
 
   return (
@@ -42,9 +47,25 @@ const TodoHeaderForm = ({ todos, setTodos }) => {
         />
       </Form.Group>
 
-      <Button variant="primary" onClick={() => handleAddTodoClick()}  disabled={inputsAreEmpty}>
-        Add
-      </Button>
+      <Form.Row>
+        <Col>
+          <Form.Control
+            type="date"
+            min='24-12-1998'
+            value={deadline}
+            onChange={e => setDeadline(e.target.value)}
+          />
+        </Col>
+        <Col>
+          <Button
+            variant="primary"
+            onClick={() => handleAddTodoClick()}
+            disabled={inputsAreEmpty}
+          >
+            Add
+          </Button>
+        </Col>
+      </Form.Row>
     </Form>
   );
 };
