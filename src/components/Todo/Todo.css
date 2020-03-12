@@ -1,0 +1,147 @@
+.close {
+  cursor: pointer;
+  color: red;
+}
+.todo {
+  width: 25vw;
+  box-sizing: border-box;
+  border: 2px solid coral;
+  border-radius: 10px;
+  /*box-shadow: lightgrey 1px 3px 10px;*/
+  overflow: hidden;
+
+  margin: 10px auto 10px auto;
+
+  background: white;
+  transition: box-shadow 300ms;
+  box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2), 0 0px 25px rgba(0, 0, 0, 0.1);
+}
+.todo:nth-child(1) {
+  margin-top: 0;
+}
+
+.todo-heading {
+  padding: 15px;
+  color: white;
+  border-bottom: 1px solid lightgrey;
+  background-color: coral;
+  display: flex;
+  flex-direction: row;
+}
+.todo-heading input {
+  box-sizing: border-box;
+  background-color: coral;
+  color: white;
+  font-size: x-large;
+  font-weight: bold;
+  border: 2px solid white;
+  border-radius: 2px;
+  padding: 5px;
+  width: 300px;
+  outline: none;
+}
+.todo-heading input p {
+  background-color: rgb(255, 149, 110);
+}
+
+.actions {
+  margin-left: auto;
+  display: flex;
+}
+.save {
+  margin: auto 0 auto 0;
+  border: 2px solid white !important;
+  box-sizing: border-box;
+  padding: 5px 15px 5px 15px;
+  border-radius: 2px;
+}
+.save:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: 0.1 ease-in-out;
+}
+.actions button {
+  font-size: medium;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0 5px 0 5px;
+  transition: 0.3s ease-in-out;
+}
+.__green {
+  background-color: rgb(153, 199, 28) !important;
+  transition: ease-out 0.2s;
+}
+.__coral {
+  background-color: coral;
+  transition: ease-out 0.2s;
+}
+.__light button {
+  color: rgb(255, 232, 203);
+}
+.actions .__completed:hover {
+  color: #aee882;
+}
+.actions button:hover {
+  color: white;
+  transition: 0.3s ease-in-out;
+}
+.todo-body {
+  display: flex;
+  flex-direction: row;
+}
+.todo-desc,
+.todo-date {
+  padding: 15px;
+}
+.todo-desc {
+  width: 80%;
+  text-align: justify;
+}
+.todo-desc textarea {
+  box-sizing: border-box;
+  width: 300px;
+
+  resize: none;
+}
+.todo-date {
+  width: 20%;
+  text-align: right;
+  border-left: 1px solid lightgrey;
+}
+
+@media only screen and (max-width: 768px) {
+  .todo {
+    width: 85vw;
+  }
+  .todo input {
+    width: 100%;
+  }
+  .todo textarea {
+    width: 100%;
+  }
+  .date {
+    font-size: x-small;
+    color: gray;
+  }
+  .todo-body {
+    flex-direction: column-reverse;
+  }
+  .todo-desc {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  input {
+    border-radius: 2px;
+    border: 2px solid lightgrey;
+  }
+  .todo-date {
+    box-sizing: border-box;
+    width: 100%;
+    margin-left: auto;
+    border-left: none;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+}

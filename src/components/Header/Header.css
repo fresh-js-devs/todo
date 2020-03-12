@@ -1,0 +1,16 @@
+header {
+  background-color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.16), 0 5px 15px rgba(0, 0, 0, 0.23);
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  height: 8vh;
+  display: flex;
+  z-index: 2;
+}
+
+header h1 {
+  background: linear-gradient(to right top, #ff7f50, #fe9831, #efb300, #d4d000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

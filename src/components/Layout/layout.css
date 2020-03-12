@@ -1,0 +1,25 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto";
+}
+
+.layout {
+  height: 92vh;
+  padding-top: 8vh;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  margin: 0 auto;
+  background: #e9eaee;
+}
+.layout h1 {
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .layout {
+    height: fit-content;
+  }
+}

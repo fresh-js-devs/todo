@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "title": "a6ppr - semestral project",
+    "description": "probably never.",
+    "date": "2020-3-15"
+  },
+  {
+    "id": 2,
+    "title": "todo list",
+    "description": "Create a To-Do list .This assignment is loosely described on purpose. You can either create a very basic, or a very advanced app. ",
+    "date": "2020-3-13"
+  },
+  {
+    "id": 3,
+    "title": "go shopping",
+    "description": "list: rice, pasta, flour",
+    "date": "2020-3-13"
+  },
+  {
+    "id": 4,
+    "title": "bachelor thesis",
+    "description": "god help me",
+    "date": "2020-4-15"
+  }
+]

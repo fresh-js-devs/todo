@@ -1,0 +1,18 @@
+footer {
+  height: 8vh;
+  width: 100%;
+  margin-top: auto;
+  background: white;
+  display: flex;
+  font-weight: bold;
+}
+footer p {
+  margin: auto;
+
+  background: linear-gradient(to right top, #ff7f50, #fe9831, #efb300, #d4d000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+footer {
+  margin-top: 5vh;
+}

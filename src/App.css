@@ -20,3 +20,46 @@
 .App-link {
   color: #09d3ac;
 }
+main {
+  display: flex;
+  flex-direction: row;
+  width: 55%;
+  margin: auto;
+}
+.main-div:nth-child(1) {
+  width: fit-content;
+  margin: 0 auto auto auto;
+  margin-left: 0;
+}
+
+.todoToday {
+  width: 450px;
+  box-sizing: border-box;
+  border: 2px solid coral;
+  border-radius: 10px;
+  /*box-shadow: lightgrey 1px 3px 10px;*/
+  overflow: hidden;
+
+  margin: 10px auto 10px auto;
+
+  background: white;
+  transition: box-shadow 300ms;
+  box-shadow: 0 0px 50px rgba(0, 0, 0, 0.2), 0 0px 25px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    margin: auto;
+    margin-top: 5vh;
+    width: 100%;
+  }
+  .main-div {
+    margin: auto;
+    width: 100%;
+  }
+  .main-div:nth-child(1) {
+    margin: auto;
+    margin-bottom: 5vh;
+  }
+}
