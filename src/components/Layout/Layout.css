@@ -1,0 +1,12 @@
+.layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    flex-direction: column;
+    margin: 1rem auto;
+}
+
+h1{
+    color: #2E3532;
+}
