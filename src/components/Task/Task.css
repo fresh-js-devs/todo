@@ -16,14 +16,9 @@
   font-size: 18px;
 }
 
-.delete-task {
-  margin-right: 20px;
+.action-icons {
   cursor: pointer;
-}
-
-.edit-task {
   margin-right: 20px;
-  cursor: pointer;
 }
 
 .icons-wrapper {
@@ -36,13 +31,18 @@
   margin-bottom: 18px;
 }
 
-.save-task {
+.cancel-task {
   cursor: pointer;
 }
 
-.cancel-task {
+.done-task {
   cursor: pointer;
   margin-left: 15px;
+}
+
+.card-title-done {
+  text-decoration: line-through;
+  font-size: 18px;
 }
 
 .editing-icons-wrapper {

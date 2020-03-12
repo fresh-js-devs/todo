@@ -16,10 +16,10 @@ function App() {
   const [newValue, setNewValue] = useState("");
 
   const renderTasks = () =>
-    tasks.map(({ id, task }) => (
+    tasks.map(({ id, task, done }) => (
       <Task
         key={id}
-        task={task}
+        title={task}
         id={id}
         deleteTask={() => deleteTask(id)}
         editing={editing}
@@ -28,6 +28,8 @@ function App() {
         setNewValue={setNewValue}
         saveEditing={() => saveEditing(newValue, id)}
         cancelEditing={cancelEditing}
+        doneTask={() => doneTask(id)}
+        isDone={done}
       ></Task>
     ));
 
@@ -39,7 +41,8 @@ function App() {
 
       const newTaskObject = {
         id: Date.now(),
-        task: newTask
+        task: newTask,
+        done: false
       };
 
       setTasks([newTaskObject, ...tasks]);
@@ -54,6 +57,15 @@ function App() {
 
   const editTask = id => {
     setEditing(id);
+  };
+
+  const doneTask = id => {
+    const taskDone = tasks.find(task => task.id === id);
+    const completedTasks = [...tasks];
+
+    taskDone.done = true;
+
+    setTasks(completedTasks);
   };
 
   const saveEditing = (newVal, id) => {

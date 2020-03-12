@@ -2,7 +2,7 @@ import React from "react";
 import "./Task.css";
 
 const Task = ({
-  task,
+  title,
   id,
   deleteTask,
   editing,
@@ -10,19 +10,28 @@ const Task = ({
   newValue,
   setNewValue,
   saveEditing,
-  cancelEditing
+  cancelEditing,
+  doneTask,
+  isDone
 }) => {
   const read = () => {
     return (
       <div className="card-wrapper">
-        <h4 className="card-title">{task}</h4>
+        <h4 className={isDone ? "card-title-done" : "card-title"}>{title}</h4>
         <div className="icons-wrapper">
-          <span className="delete-task" onClick={deleteTask}>
+          <span className="action-icons" onClick={deleteTask}>
             🗑️
           </span>
-          <span className="edit-task" onClick={editTask}>
-            🖊️
-          </span>
+          {isDone ? null : (
+            <span className="action-icons" onClick={editTask}>
+              🖊️
+            </span>
+          )}
+          {isDone ? null : (
+            <span className="action-icons" onClick={doneTask}>
+              ✔️
+            </span>
+          )}
         </div>
       </div>
     );
@@ -38,13 +47,10 @@ const Task = ({
           onChange={e => setNewValue(e.target.value)}
         ></input>
         <div className="editing-icons-wrapper">
-          <span className="save-task" onClick={cancelEditing}>
+          <span className="cancel-task" onClick={cancelEditing}>
             ❌
           </span>
-          <span
-            className="cancel-task"
-            onClick={() => saveEditing(newValue, id)}
-          >
+          <span className="done-task" onClick={() => saveEditing(newValue, id)}>
             ✔️
           </span>
         </div>
