@@ -17,7 +17,8 @@ const TodoList = ({ todos, setTodos }) => {
       name,
       description
     };
-    setTodos([newTodo, ...todos]);
+    const filteredTodos = todos.filter(todo => todo.id !== id);
+    setTodos([newTodo, ...filteredTodos]);
   };
 
   const doneClicked = id => {
