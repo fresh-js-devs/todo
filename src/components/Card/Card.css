@@ -1,0 +1,35 @@
+.card {
+  min-height: 200px;
+  margin-bottom: 40px;
+  padding: 20px;
+  width: 100%;
+  border: 1px solid black;
+  transition: box-shadow 300ms;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.26), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close {
+  color: red;
+  cursor: pointer;
+}
+
+.card-editing {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-editing input,
+.card-editing textarea,
+.card-editing button {
+  margin-bottom: 15px;
+}
