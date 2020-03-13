@@ -19,6 +19,7 @@ const Card = ({
     return (
       <div className='card-editing'>
         <input
+          className='title-editing'
           type='text'
           value={editedName}
           onChange={event => setEditedName(event.target.value)}
@@ -29,6 +30,7 @@ const Card = ({
           value={editedDescription}
           rows={10}
           onChange={event => setEditedDescription(event.target.value)}
+          className='input-editing'
         ></textarea>
 
         <button onClick={onEditSaveClicked}>Save</button>
@@ -46,7 +48,7 @@ const Card = ({
           </span>
         </div>
         <p>{description}</p>
-        <button onClick={onEditClicked}>Edit</button>
+        <button onClick={onEditClicked} className='button-on-card'>Edit</button>
       </>
     );
   };

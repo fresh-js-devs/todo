@@ -82,7 +82,7 @@ function App() {
 
   return (
     <Layout>
-      <h1 style={headingStyle}>User Cards</h1>
+      <h1 style={headingStyle}>ToDo List</h1>
       <Form>
         <input
           value={name}
@@ -104,7 +104,7 @@ function App() {
           style={buttonStyle}
           disabled={inputsAreEmpty}
         >
-          Add user
+          Add ToDo
         </button>
       </Form>
       {renderUserCards()}

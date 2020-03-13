@@ -3,10 +3,10 @@ export const headingStyle = {
 };
 
 export const inputStyle = {
-  width: '200px',
+  width: '400px',
   minHeight: '40px',
   marginBottom: '20px',
-  padding: '5px',
+  padding: '10px',
 };
 
 export const buttonStyle = {
@@ -14,4 +14,5 @@ export const buttonStyle = {
   minHeight: '40px',
   padding: '10px',
   cursor: 'pointer',
+  marginBottom: '15px',
 };

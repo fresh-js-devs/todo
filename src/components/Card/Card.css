@@ -33,3 +33,23 @@
 .card-editing button {
   margin-bottom: 15px;
 }
+
+.button-on-card{
+  padding: '15px';
+}
+
+.button-on-card:hover{
+  background-color: gainsboro;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.input-editing{
+  padding: '20px';
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+}
+
+.title-editing{
+  font-weight: bold;
+}
