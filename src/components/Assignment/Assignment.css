@@ -1,0 +1,35 @@
+.assignment {
+  border: 2px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.3);
+  background-color: rgb(150, 200, 223);
+  margin: 10px 100px;
+}
+
+.assignment-heading {
+  display: flex;
+  padding-bottom: 0px;
+}
+.asignment-buttons {
+  margin-bottom: 5px;
+}
+
+.asignment-deadline {
+  margin-bottom: 10px;
+  color: rgb(68, 108, 148);
+}
+.asignment-description {
+  margin-bottom: 0px;
+  text-align: justify;
+  margin: auto 30px;
+}
+
+.assignment-editing {
+  display: flex;
+  flex-direction: column;
+}
+
+.assignmet-editing input,
+.assignmet-editing textarea,
+.assignmet-editing button {
+  margin-bottom: 15px;
+}
