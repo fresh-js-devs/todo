@@ -5,16 +5,19 @@ import {DeleteOutlined,EditOutlined} from '@ant-design/icons';
 
 const {Meta}=Card;
 
-const Todo=({id,title,description,onDeleteClicked,onEditClicked,editing,onSaveClicked,newTitle,setNewTitle})=>{
+const Todo=({id,title,description,onDeleteClicked,onEditClicked,editing,onSaveClicked,onCancelClicked,newTitle,setNewTitle,newDescription,setNewDescription})=>{
     const editView=()=>{
         return(
             <Card hoverable={true} className="Todo">
             <Meta 
             title={<Input value={newTitle} onChange={e=>setNewTitle(e.target.value)}/>} 
-            description={<Input.TextArea value={description}/>} 
+            description={<Input.TextArea value={newDescription} onChange={e=>setNewDescription(e.target.value)}/>} 
             className="Todo-text"/>
-            <Button type="primary" className="Card-button" onClick={()=>onSaveClicked(newTitle,id)}>
+            <Button type="primary" className="Card-button" onClick={()=>onSaveClicked(newTitle,newDescription,id)}>
                 Save
+            </Button>
+            <Button type="default" className="Card-button" onClick={onCancelClicked}>
+                Cancel
             </Button>
             </Card>
         )

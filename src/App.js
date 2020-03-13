@@ -1,6 +1,7 @@
 import React,{useState} from 'react';
 import './App.css';
 import {Layout,Input,Button} from 'antd';
+import {PlusOutlined} from '@ant-design/icons';
 import Todo from './components/Todo/Todo';
 
 import ToDoMocks from './mocks/ToDos.json';
@@ -14,6 +15,7 @@ function App() {
   const [title,setTitle]=useState('');
   const [editing,setEditing]=useState(null);
   const [newTitle,setNewTitle]=useState("");
+  const [newDescription,setNewDescription]=useState("");
   
   const handleAddToDoClicked=()=>{
     const newTodo={
@@ -36,11 +38,16 @@ function App() {
     setEditing(id);
   }
 
-  const handleOnSaveCliked=(newVal,id)=>{
+  const handleOnSaveCliked=(newTit,newDesc,id)=>{
     const old=todos.find(todo=>todo.id===id);
-    
-    if(!newVal) return;
-    old.title=newVal;
+    old.title=newTit;
+    old.description=newDesc;
+    setNewTitle("");
+    setNewDescription("");
+    setEditing(null);
+  }
+  const handleCancelClicked=()=>{
+    setNewDescription("");
     setNewTitle("");
     setEditing(null);
   }
@@ -55,35 +62,46 @@ function App() {
         onDeleteClicked={()=>handleOnDeleteClicked(id)}
         onEditClicked={()=>handleOnEditClicked(id)}
         editing={editing}
-        onSaveClicked={()=>handleOnSaveCliked(newTitle,id)}
+        onSaveClicked={()=>handleOnSaveCliked(newTitle,newDescription,id)}
+        onCancelClicked={handleCancelClicked}
         newTitle={newTitle}
-        setNewTitle={setNewTitle}/>
+        setNewTitle={setNewTitle}
+        newDescription={newDescription}
+        setNewDescription={setNewDescription}/>
       )
     })
   );
 
   return (
     <Layout>
-      <Header>
-        <h2 style={{color:'white'}}>Simple CRUD ToDo</h2>
+      <Header className="header">
+        <h2 style={{color:'white'}}>Simple CRUD Todo</h2>
       </Header>
       <Content className='site-layout-content'>
-        <Input placeholder="Title..." value={title} onChange={event=>setTitle(event.target.value)}></Input>
-        <TextArea 
-        rows={4} 
-        placeholder="ToDo Description"
-        value={description} onChange={event=>setDescription(event.target.value)}></TextArea>
+        <Input placeholder="Title..." 
+        value={title} 
+        onChange={event=>setTitle(event.target.value)} 
+        className="Title-input"/>
+        <TextArea rows={4} 
+        placeholder="Todo Description"
+        value={description} 
+        onChange={event=>setDescription(event.target.value)}
+        className="Description-input"/>
         <Button 
         type="primary"
         onClick={handleAddToDoClicked}>
-          Add ToDo
+          Add Todo
+          <PlusOutlined />
         </Button>
         {
           renderTodos()
         }
       </Content>
       <Footer style={{textAlign:'center'}}>
-        This is my footer
+        <span role="img" 
+        aria-label="Smiling face with open mouth and cold sweat">
+          Made by Matej Makara under severe time preassure &#128517;
+        </span>
       </Footer>
     </Layout>
   );
