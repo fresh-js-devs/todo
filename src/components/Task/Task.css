@@ -1,0 +1,25 @@
+.task {
+    min-height:100px;
+    margin-bottom: 40px;
+    padding: 20px;
+    width: 50%;
+    border: 1px solid cornflowerblue;
+    transition: box-shadow 300ms;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.task:hover {
+
+    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.26), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.task-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close {
+    color: red;
+    cursor: pointer;
+}
