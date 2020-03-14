@@ -9,6 +9,8 @@ import {headingStyle, buttonStyle, inputStyle} from './styles/Styles';
 function App() {
   const [tasks, setTasks] = useState(Tasks);
   const [taskname, setTaskName] = useState('');
+  const [editedTaskName, setEditedTaskName] = useState('');
+  const [editedId, setEditedId] = useState(0);
 
   const inputsAreEmpty = taskname === '';
 
@@ -22,16 +24,30 @@ function App() {
     setTaskName('');
   };
 
+  const handleShowTaskEditClicked = id => {
+    setEditedId(id);
+    const editedTask = tasks.find(task => task.id === id);
+    setEditedTaskName(editedTask.name);
+  };
+
   const handleEditTaskClicked = id => {
-    const toBeEdited = tasks.filter(task => task.id === id);
+    const toBeEdited = tasks.map(task => {
+      if (task.id === editedId) {
+        return {
+          ...task,
+          taskname: editedTaskName,
+        };
+      }
+      return task;
+    });
     const editedTask = {
       id: toBeEdited.id,
       taskname,
     };
 
-    setTasks([editedTask, ...tasks]);
-    setTaskName('');
-  }
+    setTasks(editedTask);
+    setEditedId(0);
+  };
 
   const handleCloseClicked = id => {
     const filteredTasks = tasks.filter(task => task.id !== id);
@@ -39,10 +55,11 @@ function App() {
   }
 
   const renderTasks = () =>
-  tasks.map(({id, taskname}) => (
-    <Task
-      key={id}
-      taskname={taskname}
+    tasks.map(({ id, taskname }) => (
+      <Task
+        key={id}
+        taskname={taskname}
+        onEditTaskClicked={() => handleEditTaskClicked}
       onCloseClicked={() => handleCloseClicked(id)}
     />
   ));

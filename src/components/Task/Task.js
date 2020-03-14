@@ -3,13 +3,13 @@ import React from 'react';
 //import { headingStyle } from '../../styles/Styles';
 import './Task.css';
 
-const Task = ({taskname, onEditClicked, onCloseClicked}) => {
+const Task = ({taskname, onEditTaskClicked, onCloseClicked}) => {
     return(
         <div className='task'>
             <div className='task-heading'>
                 🦄 {taskname}
                 <span>
-                    <span onClick={onEditClicked} className='edit'>
+                    <span onClick={onEditTaskClicked} className='edit'>
                         📝  
                 </span>
                     <span onClick={onCloseClicked} className='close'>
