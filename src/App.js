@@ -14,7 +14,7 @@ function App() {
 
   const handleAddTaskClicked = () => {
     const newTask = {
-      id: tasks.length + 10,
+      id: Date(),
       taskname,
     };
 
@@ -22,13 +22,20 @@ function App() {
     setTaskName('');
   };
 
+  const handleEditTaskClicked = id => {
+    const toBeEdited = tasks.filter(task => task.id === id);
+    const editedTask = {
+      id: toBeEdited.id,
+      taskname,
+    };
+
+    setTasks([editedTask, ...tasks]);
+    setTaskName('');
+  }
+
   const handleCloseClicked = id => {
     const filteredTasks = tasks.filter(task => task.id !== id);
     setTasks(filteredTasks);
-  }
-
-  const handleEditClicked = id => {
-    const filteredTasks = tasks.filter(task => task.id !== id);
   }
 
   const renderTasks = () =>
@@ -42,7 +49,7 @@ function App() {
 
   return (
   <Layout>
-    <h1 style={headingStyle}>To-Do App</h1>
+    <h1 style={headingStyle}>To-Do app</h1>
     <Form>
       <input
         value={taskname}
@@ -51,9 +58,9 @@ function App() {
         style={inputStyle}
         task='taskname'
         placeholder='task'
-      />
+        />
       <button onClick={handleAddTaskClicked} style={buttonStyle} disabled={inputsAreEmpty}>
-        Add task
+          Add task
       </button>
     </Form>
     {renderTasks()}

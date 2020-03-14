@@ -1,4 +1,10 @@
 .layout {
-    width: 20%;
-    margin: 0 auto;
+    width: 30%;
+    margin: 30px auto;
+    padding: 30px;
+    border: whitesmoke;
+    border-style: outset;
+    border-radius: 30px;
+    min-height: 500px;
+    background-color: rgb(36, 57, 149);
 }
