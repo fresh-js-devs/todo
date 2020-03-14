@@ -1,0 +1,101 @@
+.card {
+  min-height: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+  width: 100%;
+  border-radius: 50px;
+  border: 1px solid black;
+  transition: box-shadow 300ms;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.26), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.card-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.close {
+  margin-right: 20px;
+  color: red;
+  cursor: pointer;
+}
+
+.card-editing {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.card-editing input {
+  border: none;
+  font-family: "Open Sans", sans-serif;
+  outline: none;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 19px;
+  margin-bottom: 19px;
+}
+.card-editing textarea,
+.card-editing button {
+  margin-bottom: 15px;
+}
+.card-editing-button {
+  margin-left: 30px;
+  margin-bottom: 15px;
+}
+
+.btn-group.special {
+  border-radius: 100px;
+  /*border-top-left-radius: 1000px;
+  border-top-right-radius: 1000px;*/
+  display: flex;
+}
+
+.special .btn {
+  background-color: #f1f1f1; /* Green */
+  border: none;
+  color: rgb(117, 117, 117);
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  flex: 1;
+  font-family: "Open Sans", sans-serif;
+}
+
+.special .btn.btn-close {
+  border-top-left-radius: 1000px;
+  border-bottom-left-radius: 1000px;
+}
+
+.special .btn.btn-edit {
+  border-top-right-radius: 1000px;
+  border-bottom-right-radius: 1000px;
+}
+
+.special .btn.btn-save {
+  border-radius: 1000px;
+  margin-bottom: auto;
+}
+
+.special .btn:hover {
+  background-color: #cccccc; /* Green */
+}

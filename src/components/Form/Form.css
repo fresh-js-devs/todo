@@ -1,0 +1,34 @@
+.form {
+  background-color: #f1f1f1;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  /*padding: 5px 5px;*/
+}
+
+.form h1 {
+  margin-left: 25px;
+  font-family: "Open Sans", sans-serif;
+}
+
+.formium {
+  margin: 0 auto;
+}
+
+.form input {
+  border-radius: 100px;
+  margin: 25px;
+  width: 150px;
+  border: none;
+  outline: none;
+  font-size: medium;
+  font-family: "Open Sans", sans-serif;
+}
+
+.form button {
+  background-color: #3faadb;
+  border-radius: 100px;
+}
