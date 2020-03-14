@@ -1,0 +1,8 @@
+.layout {
+    width: 70%;
+    margin: 10px auto 100px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    background-image: element('pug.png');
+}

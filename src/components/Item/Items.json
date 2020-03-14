@@ -1,0 +1,31 @@
+[
+    {
+      "id": 1,
+      "name": "Create a Todo list",
+      "description": "Important"
+    },
+
+    {
+      "id": 2,
+      "name": "Check blood pressure",
+      "description": "After dinner, running"
+    },
+
+    {
+      "id": 3,
+      "name": "Write an email",
+      "description": "Home studying"
+    },
+
+    {
+      "id": 4,
+      "name": "Read a book",
+      "description": "Motivation"
+    },
+
+    {
+      "id": 5,
+      "name": "Go shopping",
+      "description": "With mum at 14.30"
+    }
+]

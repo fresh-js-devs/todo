@@ -1,0 +1,51 @@
+.backFrame {
+    text-align: left;
+    padding: 5px;
+    margin: 1px;
+    border: 1px solid black;
+    background-color: lightcoral;
+}
+
+.frame {
+    color: black;
+    text-align: left;
+    padding: 5px;
+    border: 1px solid black;
+    background-color: lightgray;
+}
+
+
+.other {
+    text-align: right;
+}
+
+
+.edit {
+    padding-left: 400px;
+    color: blue;
+    cursor: pointer;
+}
+
+.close {
+    margin-left: 50px;
+    color: red;
+    cursor: pointer;
+}
+
+
+.largerCheckBox {
+    margin-left: 60px;
+    width: 30px;
+    height: 30px;
+}
+
+
+.editDiv {
+    margin: 10px;
+    flex-direction: row;
+}
+
+.editDivInput {
+    width: 500px;
+    margin: 0 auto;
+}
