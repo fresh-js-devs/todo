@@ -1,9 +1,10 @@
 export const buttonStyle = {
-    width: '110px',
+    width: '97px',
     minHeight: '30px',
     marginBottom: '10px',
     padding: '5px',
     cursor: 'pointer',
+    color: 'rgb(36, 57, 149)',
 };
 
 export const headingStyle = {
@@ -11,7 +12,7 @@ export const headingStyle = {
 };
 
 export const inputStyle = {
-    width: '200px',
+    minWidth: '30px',
     minHeight: '30px',
     marginBottom: '10px',
     padding: '5px',

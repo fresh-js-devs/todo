@@ -7,14 +7,10 @@ const Task = ({taskname, onEditTaskClicked, onCloseClicked}) => {
     return(
         <div className='task'>
             <div className='task-heading'>
-                🦄 {taskname}
+               <span role="img" aria-label="unicorn"> 🦄 {taskname}</span>
                 <span>
-                    <span onClick={onEditTaskClicked} className='edit'>
-                        📝  
-                </span>
-                    <span onClick={onCloseClicked} className='close'>
-                        ❌
-                </span>
+                    <span role="img" aria-label="memo" onClick={onEditTaskClicked} className='edit'> 📝 </span>
+                    <span role="img" aria-label="wastebasket" onClick={onCloseClicked} className='close'> 🗑️ </span>
                 </span>
             </div>
         </div>

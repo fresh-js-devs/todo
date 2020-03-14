@@ -59,8 +59,12 @@ function App() {
       <Task
         key={id}
         taskname={taskname}
-        onEditTaskClicked={() => handleEditTaskClicked}
-      onCloseClicked={() => handleCloseClicked(id)}
+        editedId={editedId}
+        editedTaskName={editedTaskName}
+        setEditedTaskName={setEditedTaskName}
+        //onEditTaskClicked={() => handleEditTaskClicked(id)}
+        onEditTaskClicked={() => handleShowTaskEditClicked(id)}
+        onCloseClicked={() => handleCloseClicked(id)}
     />
   ));
 
