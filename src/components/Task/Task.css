@@ -1,16 +1,16 @@
 .task {
-    min-height:100px;
-    margin-bottom: 40px;
-    padding: 20px;
-    width: 50%;
-    border: 1px solid cornflowerblue;
-    transition: box-shadow 300ms;
+    min-height:30px;
+    margin-bottom: 10px;
+    padding: 15px;
+    width: 100%;
+    border: 5px double cornflowerblue;
+    background-color: whitesmoke;
+    transition: box-shadow 400ms;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 .task:hover {
-
-    box-shadow: 0 14px 18px rgba(0, 0, 0, 0.26), 0 10px 10px rgba(0, 0, 0, 0.22);
+    box-shadow: 0 6px 12px rgba(8, 69, 211, 0.534), 0 10px 10px rgba(7, 14, 75, 0.22);
 }
 
 .task-heading {
@@ -19,7 +19,15 @@
     align-items: center;
 }
 
+.edit {
+    color: rgb(223, 118, 136);
+    cursor: pointer;
+}
+
 .close {
     color: red;
     cursor: pointer;
+}
+.close:hover {
+    background-color: rgba(206, 91, 145, 0.486);
 }

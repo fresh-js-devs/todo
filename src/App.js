@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 import Layout from './components/Layout/Layout';
 import Form from './components/Form/Form';
 import Task from './components/Task/Task';
-//import './App.css';
+import Tasks from './mocks/tasks.json';
+import './App.css';
 import {headingStyle, buttonStyle, inputStyle} from './styles/Styles';
 
 function App() {
-  const [tasks, setTasks] = useState(Task);
+  const [tasks, setTasks] = useState(Tasks);
   const [taskname, setTaskName] = useState('');
 
   const inputsAreEmpty = taskname === '';
@@ -26,32 +27,35 @@ function App() {
     setTasks(filteredTasks);
   }
 
+  const handleEditClicked = id => {
+    const filteredTasks = tasks.filter(task => task.id !== id);
+  }
+
   const renderTasks = () =>
   tasks.map(({id, taskname}) => (
     <Task
-      key={id} 
-      name={taskname} 
+      key={id}
+      taskname={taskname}
       onCloseClicked={() => handleCloseClicked(id)}
     />
   ));
 
   return (
   <Layout>
-    <h1 style={headingStyle}>ToDo App</h1>
+    <h1 style={headingStyle}>To-Do App</h1>
     <Form>
-      <input 
+      <input
         value={taskname}
         onChange={event => setTaskName(event.target.value)}
         onClick={event => setTaskName('')}
         style={inputStyle}
-        todo='todo'
-        placeholder='task name'
+        task='taskname'
+        placeholder='task'
       />
       <button onClick={handleAddTaskClicked} style={buttonStyle} disabled={inputsAreEmpty}>
         Add task
       </button>
     </Form>
-    <Task taskname='dummy task'/>
     {renderTasks()}
   </Layout>
   )
