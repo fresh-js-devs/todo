@@ -14,6 +14,8 @@ export const headingStyle = {
 export const inputStyle = {
     minWidth: '30px',
     minHeight: '30px',
-    marginBottom: '10px',
     padding: '5px',
+    backgroundColor: 'transparent',
+    border: '0px',
+    fontSize: '18px',
 };

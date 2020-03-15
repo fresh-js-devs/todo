@@ -62,8 +62,7 @@ function App() {
         editedId={editedId}
         editedTaskName={editedTaskName}
         setEditedTaskName={setEditedTaskName}
-        //onEditTaskClicked={() => handleEditTaskClicked(id)}
-        onEditTaskClicked={() => handleShowTaskEditClicked(id)}
+        onChange={event => setEditedTaskName(event.target.value)}
         onCloseClicked={() => handleCloseClicked(id)}
     />
   ));
@@ -76,7 +75,6 @@ function App() {
         value={taskname}
         onChange={event => setTaskName(event.target.value)}
         onClick={event => setTaskName('')}
-        style={inputStyle}
         task='taskname'
         placeholder='task'
         />
