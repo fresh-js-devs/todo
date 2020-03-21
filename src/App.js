@@ -90,6 +90,11 @@ function App() {
           name="name"
           placeholder="Name"
         />*/}
+
+        {/* 
+        FEEDBACK: v public zlozke Reactu existuje index.html, kde sa linkuju externe subory.. 
+        v ramci Reactu samotneho by si nikdy nemal linkovat externe subory tymto sposobom
+        */}
         <link
           href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
           rel="stylesheet"
@@ -118,5 +123,14 @@ function App() {
     </Layout>
   );
 }
+
+/*
+FEEDBACK
+Ano, je to v podstate to iste, co karticky, ale nabuduce davaj pozor, ked kopirujes odniekial kod, nevyzera to uplne najlepsie :D
+cards.json, renderUserCards atd... 
+Zaroven pozor na odkomentovane casti v kode, pri pull requeste v praci by ti to dali vyzrat.
+
+Inak pomerne pekne UI, chvalim, skoda, ze si nepouzil styled components
+*/
 
 export default App;
