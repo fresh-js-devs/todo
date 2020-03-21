@@ -19,6 +19,12 @@ const Task = ({
       <div className="card-wrapper">
         <h4 className={isDone ? "card-title-done" : "card-title"}>{title}</h4>
         <div className="icons-wrapper">
+          {/* 
+          FEEDBACK 
+          Pre rendrovanie iba jednej veci mozes kludne pouzit operator &&
+          isDone && <span></span>
+          jednoduchsie, rychlejsie, prehladnejsie :)
+          */}
           <span className="action-icons" onClick={deleteTask}>
             🗑️
           </span>
@@ -57,7 +63,8 @@ const Task = ({
       </div>
     );
   };
-
+  // FEEDBACK
+  // su to rendrovacie funkcie, takze by som zvolil deskriptivnejsie nazvy
   return editing === id ? edit() : read();
 };
 

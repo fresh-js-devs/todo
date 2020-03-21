@@ -101,3 +101,11 @@ function App() {
 }
 
 export default App;
+
+/*
+FEEDBACK
+- setEditing by mohol byt kludne prazdny string, namiesto null
+
+- pekne UI, styled components cenim, kazdopadne nie je dobre miesat stylesheets a styled components, kvoli prehladnosti
+- kod cisty a prehladny, delenie na rendery a handlery
+*/
