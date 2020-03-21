@@ -2,6 +2,9 @@ import React from "react";
 
 import "./List.css";
 
+/**
+ * FEEDBACK: To samé jako u Footer, Header, Layout :-)
+ */
 const List = ({ title, onCloseClicked, editTodo }) => {
   return (
     <li>

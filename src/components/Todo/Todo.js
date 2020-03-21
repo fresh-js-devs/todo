@@ -2,6 +2,9 @@ import React, { useState } from "react";
 
 import "./Todo.css";
 
+/**
+ * FEEDBACK: Menší výtka do budoucna...nezapomeň mazat console.log
+ */
 const Todo = ({
   title,
   description,

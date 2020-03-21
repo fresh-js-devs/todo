@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+/**
+ * FEEDBACK: Doporučím oddělit si importy 3.strany (react, emotion...) s vlastními importy pro přehlednost
+ *           Nenechávat nepoužité importy a proměnné 
+ */
 import logo from "./logo.svg";
 import Layout from "./components/Layout/Layout.js";
 import Form from "./components/Form/Form";
@@ -14,6 +18,9 @@ function App() {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [date, setDate] = useState(new Date().toDateString());
+  /**
+   * FEEDBACK: Opět menší výtka. Zkus oddělovat proměnné a funkce novým řádkem pro přehlednost
+   */
   const handleAddTodoClick = () => {
     if ((title && description && date !== "") || null) {
       const newTodo = {
@@ -29,12 +36,18 @@ function App() {
     }
   };
 
+  /**
+   * FEEDBACK: Super!
+   */
   const today = () => {
     const d = new Date();
     const today = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
     return today;
   };
 
+  /**
+   * FEEDBACK: Pokud dobře vidím tak todayDate nikde neupravuješ...může to být teda const
+   */
   let todayDate = today();
 
   console.log(`tu je dautm ${todayDate}`);
@@ -60,7 +73,10 @@ function App() {
         updateTodo={updateTodo}
       />
     ));
-
+  
+  /**
+   * FEEDBACK: Pro přehlednost bych tohle přemístil před renderTodosToday
+   */  
   const dueToday = todos.filter(todo => today() === todo.date);
 
   const updateTodo = (id, updatedTodo) => {
@@ -81,6 +97,9 @@ function App() {
     setTodos(editedTodo);*/
   };
 
+  /**
+   * FEEDBACK: Header stačilo vyrenderovat nepárově: <Header /> ...to stejné i u Footer komponenty
+   */
   return (
     <Layout>
       <Header></Header>
