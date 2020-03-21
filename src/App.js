@@ -29,6 +29,11 @@ function App() {
   const [editedDate, setEditedDate] = useState("");
   const [editedId, setEditedId] = useState(0);
 
+  // FEEDBACK
+  // V JavaScripte existuju tzv. falsey values a prazdne stirngy su jednym z nich
+  // tzn ten check mozes napisat aj napriklad takto:
+  // const inputsAreEmpty = !name || !description
+  // inak, mas tam 2x description
   const inputsAreEmpty =
     name === "" || description === "" || description === "";
 
@@ -73,11 +78,19 @@ function App() {
 
   const handleCloseClicked = id => {
     const filteredAssignments = assignments.filter(
+      // FEEDBACK
+      // Weak equality operator sa v JS nepouziva nikdy
+      // vzdy je lepsie pouzit strict equality !==, pretoze on porovnava ako typ, tak aj hodnotu
+      // rozdiel medzi nimi je nasledovny.. ak by si pouzil 1 != '1', tak ti to vrati false, pretoze cekuje iba hodnoty
+      // pomocou !== sa vies vyhnut necakanym errorom :)
       assignment => assignment.id != id
     );
     setAssignments(filteredAssignments);
   };
 
+  // FEEDBACK
+  // jedna sa o arrow funkciu, takze mozes kludne napisat
+  // const handleEditCancelClicked = () => setEdited(0)
   const handleEditCancelClicked = () => {
     setEditedId(0);
   };
