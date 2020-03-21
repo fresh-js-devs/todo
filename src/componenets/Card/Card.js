@@ -46,6 +46,9 @@ export default function MediaCard({
       break;
   }
 
+  /**
+   * FEEDBACK: === je víc safe
+   */
   const chooseButtonByTimerState = () => {
     if (timerState[0] == id && timerState[1] === true)
       return (

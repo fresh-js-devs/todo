@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+/**
+ * FEEDBACK: Máš celkem guláš v těch importech...doporočuju ti oddělovat si importy 3.strany (react, materila, emotion...) od tvých importů
+ *           Nezapomeň odstraňovat nepoužívané importy
+ */
 import logo from "./logo.svg";
 import "./App.css";
 import Button from "@material-ui/core/Button";
@@ -13,6 +17,9 @@ import AddIcon from "@material-ui/icons/Add";
 import { useScrollTrigger } from "@material-ui/core";
 import SoundEffect from "./mp3Sounds/short.mp3";
 
+/**
+ * FEEDBACK: Wau...zvuky :O
+ */
 const renderTime = value => {
   if (value === 0) {
     document.getElementById("my_audio").play();
@@ -30,6 +37,9 @@ const renderTime = value => {
   );
 };
 
+/**
+ * FEEDBACK: Nezapomeň mazat nepoužívané funkce
+ */
 function App() {
   const [tasks, setTasks] = useState(Tasks);
   const [editID, setEditId] = useState(0);
@@ -87,6 +97,9 @@ function App() {
     setEditId(newTask.id);
   };
 
+  /**
+   * FEEDBACK: !== je víc safe a je to best practice
+   */
   const handleDeleteCard = id => {
     const newTasks = tasks.filter(card => card.id != id);
     setTasks(newTasks);

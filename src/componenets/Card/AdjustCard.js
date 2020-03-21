@@ -7,6 +7,9 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+/**
+ * FEEDBACK: Zbytečné importy mazej
+ */
 import DeleteIcon from "@material-ui/icons/Delete";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
@@ -23,6 +26,9 @@ const useStyles = makeStyles({
   }
 });
 
+/**
+ * FEEDBACK: Zbytečné properties mazej
+ */
 export default function MediaCard({
   id,
   name,
