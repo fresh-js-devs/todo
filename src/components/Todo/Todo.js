@@ -5,6 +5,16 @@ import {DeleteOutlined,EditOutlined} from '@ant-design/icons';
 
 const {Meta}=Card;
 
+/**
+ * FEEDBACK: Neeeeeeeeeee :O Prosím odsazuj ty parametry...tohle není pěkná špageta...příště prosím odřádkovat:
+ *           const Todo=({
+ *              id,
+ *              title,
+ *              ...
+ *           })
+ * 
+ *          Plus ještě trochu odsazení chybí...doporučuju Prettier :D
+ */
 const Todo=({id,title,description,onDeleteClicked,onEditClicked,editing,onSaveClicked,onCancelClicked,newTitle,setNewTitle,newDescription,setNewDescription})=>{
     const editView=()=>{
         return(

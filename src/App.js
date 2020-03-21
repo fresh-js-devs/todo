@@ -1,4 +1,8 @@
 import React,{useState} from 'react';
+/**
+ * FEEDBACK: Doporučím oddělit si importy 3.strany (react, emotion...) s vlastními importy pro přehlednost
+ *           Nenechávat nepoužité importy a proměnné 
+ */
 import './App.css';
 import {Layout,Input,Button} from 'antd';
 import {PlusOutlined} from '@ant-design/icons';
@@ -6,6 +10,9 @@ import Todo from './components/Todo/Todo';
 
 import ToDoMocks from './mocks/ToDos.json';
 
+/**
+ * FEEDBACK: Maličká výtka za chybějící mezery mezi = :/
+ */
 function App() {
   const {Header,Content,Footer}=Layout;
   const {TextArea}=Input;
