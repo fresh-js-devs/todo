@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+/**
+ * FEEDBACK: Je lepší si pro přehlednost rozdělit importy 3. strany (react, emotion...) od vlastních importů
+ */
 import Layout from './components/Layout/Layout';
 import Form from './components/Form/Form';
 import Todo from './components/Todo/Todo';
@@ -12,11 +15,20 @@ function App() {
   const [editedTaskName,setEditedTaskName] = useState('');
   const [editedId, setEditedId] = useState(0);
   const [completed, setCompleted] = useState(false);
+  /**
+   * FEEDBACK: Supr...správný formát konstanty
+   */
   const LOCAL_STORAGE_KEY = 'listTodos';
   
   const inputsAreEmpty = taskName === '';
 
+  /**
+   * FEEDBACK: Tady je někdo popředu :D Cením
+   */
   useEffect(() => {
+    /**
+     * FEEDBACK: Dávej si pozor na localStorage...měl bys prvně ocheckovat, jestli localStorage existuje (if (window.localStorage))
+     */
     const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
     if(storageTodos){
       setTasks(storageTodos);
@@ -27,6 +39,9 @@ function App() {
     localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(tasks));
   }, [tasks]);
 
+  /**
+   * FEEDBACK: Dobrý nápad pro ID
+   */
   const handleAddTaskClicked = () => {
     const newTask = {
       id: Date.now().toString(),
@@ -39,6 +54,9 @@ function App() {
     setCompleted(false);
   };
 
+  /**
+   * FEEDBACK: Je to taková blbost, ale chybí ti mezera mezi if a závorkou
+   */
   const handleCompletedTaskClicked = id => {
     setTasks(
       tasks.map(task => {
@@ -97,6 +115,9 @@ function App() {
     setCompleted(false);
   };
 
+  /**
+   * FEEDBACK: Aaaaaa prosím nedávat mezery mezi = u parametrů!!! key={id} prosím :)
+   */
   const renderTodoTasks = () => 
   tasks.map(({id,taskName,completed}) => (
     <Todo

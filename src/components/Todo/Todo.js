@@ -18,6 +18,15 @@ const Todo =
 
     const isEditActive = id === editedId;
 
+    /**
+     * FEEDBACK: Tady není třeba return, mohl jsi to napsat ve tvaru renderEditView = () => (<>...</>)
+     *           Trochu formátování by neuškodilo...input je už moc dlouhý, stačilo by to zalomit. Př:
+     *              <input
+     *                  type='text'
+     *                  value={editedTaskName}
+     *                  ...
+     *              />
+     */
     const renderEditView = () =>{
         return(
             <>
