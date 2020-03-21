@@ -10,6 +10,9 @@ import Card from './components/Card/Card';
 
 import './App.css';
 
+/**
+ * FEEDBACK: Není moc, co opravovat, v podsatě okopírované kartičky :D
+ */
 function App() {
   const [users, setUsers] = useState(Users);
   const [name, setName] = useState('');
