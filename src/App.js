@@ -1,5 +1,8 @@
 import React, { useState }  from 'react';
 
+/**
+ * FEEDBACK: Zbytečné importy, které nepoužíváš
+ */
 import logo from './logo.svg';
 import emoji from './emoji.png';
 import pug from './pug.png';
@@ -18,6 +21,9 @@ import { headingStyle, inputStyle, buttonStyle } from './styles/Styles';
 import Button from './components/atoms/Button.js'
 import Input from './components/atoms/Input.js'
 import TextArea from './components/atoms/TextArea.js'
+/**
+ * FEEDBACK: Piš importy, proměnné atd. slovně, takže tady HeaderOne
+ */
 import Header1 from './components/atoms/headers/Header1.js'
 
 
@@ -31,6 +37,9 @@ function App() {
   const [editedName, setEditedName] = useState('');
   const [editedDescription, setEditedDescription] = useState('');
 
+  /**
+   * FEEDBACK: Zbytečné proměnné odstraň...ve větším projektu bys už v tom měl pěný guláš
+   */
   const [checkedItems, setCheckedItems] = useState('');
   const [checkedId, setCheckedId] = useState(0);
   const [checkedName, setCheckedName] = useState('');
@@ -56,6 +65,9 @@ function App() {
     setDescription('');
   };
 
+  /**
+   * FEEDBACK: Asi nemá cenu nechávat zakomentovaný kód
+   */
 
   // const handleAddItemClicked = () => {
   //   const newItem = {
@@ -133,7 +145,9 @@ function App() {
     setEditedId(0);   // close edit properly = set editedId to 0 
   }
 
-
+  /**
+   * 
+   */
   const renderItems = () => 
     items &&    // if items is not false (null, empty, undefined)
     items.map(({ id, name, description }) => (

@@ -98,7 +98,9 @@ const Item = ({
     
 
     
-
+    /**
+     * FEEDBACK: Tuhle logiku moc nechápu :D
+     */
     return (
         <div>
             {isEditActive ? renderEditView() : renderNormalView() }

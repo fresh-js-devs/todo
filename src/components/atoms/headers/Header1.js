@@ -8,7 +8,9 @@ const Header1 = styled.header`
     font-size: 50px;
     padding: 20px;
 `;
-
+/**
+ * FEEDBACK: Zbytečně moc nových řádků :-P
+ */
 
 
 export default Header1;
