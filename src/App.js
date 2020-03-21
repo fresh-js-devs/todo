@@ -22,3 +22,15 @@ function App() {
 }
 
 export default App;
+
+/*
+FEEDBACK:
+- ked kliknem na edit, nezobrazuju sa mi povodne hodnoty, co z hladiska UX nemusi byt ideal
+- Deadline inputu chýba dátum
+- Logika by mala byt idealne v App.js, kazdopadne pouzil si ine delenie komponent, takze az taky problem to nie je
+
+- Kod je pekny, prehladny, nemam moc co vytknut
+- Bootstrap a UI cenim
+- Styled Components, super
+- Good job!
+*/
