@@ -17,16 +17,14 @@ const Item = ({
     const renderNormalView = () => {
         return (
             <>
-                <div className="item">
                     <div className="item-heading">
                     <h2>{id}</h2>
                     <h2>{task}</h2>                        
                     <span onClick={onCloseClicked} className='close'>
-                            close
+                            throw off this task
                     </span>
                     </div>                   
                     <button type="button" onClick={onEditClicked}>edit</button>
-                </div>
             </>
         );
     };
