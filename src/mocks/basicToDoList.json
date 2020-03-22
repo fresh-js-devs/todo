@@ -1,11 +1,16 @@
 [
     {
-        "finishDate": "2020-03-05",
-        "todo": "zalit pole"
+        "id": "1",
+        "task": "zalit pole"
     },
 
     {
-        "finishDate": "2020-11-05",
-        "todo": "zalit pole"
+        "id": "2",
+        "task": "vynes kos"
+    },
+
+    {
+        "id": "3",
+        "task": "poklidit prase"
     }
 ]
