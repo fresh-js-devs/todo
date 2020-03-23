@@ -42,7 +42,7 @@ function App() {
 
   const  handleShowItemEditClicked = id =>{
     setEditedID(id);
-    const editedTask=todolist.find(items=>items.id=id);
+    const editedTask=todolist.find(items=>items.id===id);
     setEditedTask(editedTask.task);
   }
 
@@ -89,7 +89,7 @@ function App() {
       <button type="button" onClick={handelAddTaskClicked} disabled = {inputsAreEmpty}>add task</button>
       </Form>      
       {renderToDoList()}
-    <p>{editedTask}</p>
+    <p>{editedID}</p>
     </div>
   );
 }

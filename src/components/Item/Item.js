@@ -33,8 +33,8 @@ const Item = ({
     const renderEditView = () => {
         return (
             <div className="item-editing">
-                
-                <textarea
+                <h2>{id}</h2>
+                <textarea enabled
                     value= {editedTask}
                     onChange={event => setEditedTask(event.target.value)}
                     placeholder='Task'
