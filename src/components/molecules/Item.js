@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from '@emotion/styled';
-
   const Heading = styled.div`
     display: flex;
     justify-content: space-between;
@@ -8,13 +7,11 @@ import styled from '@emotion/styled';
     border: solid;
     padding-right: 10px;
   `;
-
 const CustomButton = styled.span`
     color: red;
     cursor: pointer;
     border: solid;
 `;
-
 const Item = ({
     id,
     editedID,
@@ -25,7 +22,6 @@ const Item = ({
     onEditClicked,
     onEditSaveClicked,
     onEditCancelClicked,
-
 }) => {
     const renderNormalView = () => {
         return (
@@ -36,7 +32,7 @@ const Item = ({
                             throw off this task
                     </CustomButton>
                                      
-                    <button type="button"  onClick={onEditClicked}>edit</button>
+                    <button type="button" onClick={onEditClicked}>edit</button>
                     </Heading>  
         )
     };
