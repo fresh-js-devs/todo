@@ -4,7 +4,6 @@ import ToDoList from './mocks/basicToDoList.json'; //import json
 
 //CSS 
 import Form from './components/Form/Form';
-//import { inputStyle} from "./styles/Styles";
 
 //ATOMIC DESING
 import Button from './components/atoms/Button'
@@ -84,8 +83,7 @@ function App() {
       <Form>
       <Input 
          value={task}
-         onChange={event=>setTask(event.target.value)}         
-         //style={inputStyle} 
+         onChange={event=>setTask(event.target.value)}    
          name="task"
          placeholder="type new task">
       </Input>
