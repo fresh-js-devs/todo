@@ -4,10 +4,11 @@ import ToDoList from './mocks/basicToDoList.json'; //import json
 
 //CSS 
 import Form from './components/Form/Form';
-import { inputStyle} from "./styles/Styles";
+//import { inputStyle} from "./styles/Styles";
 
 //ATOMIC DESING
 import Button from './components/atoms/Button'
+import Input from './components/atoms/Input'
 import Item from './components/molecules/Item'
 
 function App() {
@@ -81,13 +82,13 @@ function App() {
     <div className="App">
       <h1>Welcome in vojtas ToDo app</h1>
       <Form>
-      <input 
+      <Input 
          value={task}
          onChange={event=>setTask(event.target.value)}         
-         style={inputStyle} 
+         //style={inputStyle} 
          name="task"
          placeholder="type new task">
-      </input>
+      </Input>
       <Button onClick={handelAddTaskClicked} disabled = {inputsAreEmpty}>add task</Button>
       </Form>      
       {renderToDoList()}
