@@ -1,5 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import Button from '../atoms/Button'
+
+
   const Heading = styled.div`
     display: flex;
     justify-content: space-between;
@@ -32,7 +35,7 @@ const Item = ({
                             throw off this task
                     </CustomButton>
                                      
-                    <button type="button" onClick={onEditClicked}>edit</button>
+                    <Button onClick={onEditClicked}>edit</Button>
                     </Heading>  
         )
     };
@@ -48,8 +51,8 @@ const Item = ({
                         onChange={event => setEditedTask(event.target.value)}
                         placeholder='Task'
                     />
-                    <button type="button" onClick={onEditSaveClicked}>save</button>
-                    <button type="button" onClick={onEditCancelClicked}>cancel</button>
+                    <Button onClick={onEditSaveClicked}>save</Button>
+                    <Button type="button" onClick={onEditCancelClicked}>cancel</Button>
             </Heading>   
             
         )
