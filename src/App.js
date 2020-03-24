@@ -31,7 +31,7 @@ function App() {
       editedID={editedID}
       task={item.task}  
       editedTask={editedTask}      
-      setEditedTask={()=>setEditedTask}
+      setEditedTask={setEditedTask}
       onEditClicked={()=>handleShowItemEditClicked(item.id)}
       onEditSaveClicked={()=>handleSaveClicked(item.id)}
       onEditCancelClicked={()=>handelonEditCancelClicked()}
