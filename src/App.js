@@ -1,11 +1,15 @@
 import React , {useState} from 'react';
 import './App.css';
+
+//CSS STYLESHEETS
 import ToDoList from './mocks/basicToDoList.json'; //import json
-import Item from './components/Item/Item'; 
 import Form from './components/Form/Form';
-//import Button from './components/Button/Button';
-//import Button from './components/atoms/Button'
 import { inputStyle} from "./styles/Styles";
+
+//ATOMIC DESING
+import Button from './components/atoms/Button'
+import Item from './components/molecules/Item'
+
 function App() {
 
   const[todolist, setTodolist] = useState(ToDoList);//useState(Users)...hook nastavuje defaultní stav
@@ -86,7 +90,7 @@ function App() {
          name="task"
          placeholder="type new task">
       </input>
-      <button type="button" onClick={handelAddTaskClicked} disabled = {inputsAreEmpty}>add task</button>
+      <Button onClick={handelAddTaskClicked} disabled = {inputsAreEmpty}>add task</Button>
       </Form>      
       {renderToDoList()}
     <p>{editedID}</p>
