@@ -1,8 +1,8 @@
 import React , {useState} from 'react';
 import './App.css';
-
-//CSS STYLESHEETS
 import ToDoList from './mocks/basicToDoList.json'; //import json
+
+//CSS 
 import Form from './components/Form/Form';
 import { inputStyle} from "./styles/Styles";
 
@@ -81,8 +81,6 @@ function App() {
     <div className="App">
       <h1>Welcome in vojtas ToDo app</h1>
       <Form>
-      {/* <Button onClick={handelAddTaskClicked}      
-      >added button</Button> */}      
       <input 
          value={task}
          onChange={event=>setTask(event.target.value)}         

@@ -1,15 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
 
-// const Wrapper = styled.div({
-//     minHeight: '200px',
-//     marginBottom: '40px',
-//     padding: '20px',
-//     width: '100%',
-//     border: '1px solid black',
-//     transition: 'box-shadow 300ms',      
-//   });
-
   const Heading = styled.div`
     display: flex;
     justify-content: space-between;
@@ -23,7 +14,6 @@ const CustomButton = styled.span`
     cursor: pointer;
     border: solid;
 `;
-
 
 const Item = ({
     id,
