@@ -1,7 +1,13 @@
 import React , {useState} from 'react';
+/**
+ * FEEDBACK: Malá rada: Snaž se oddělit novým řádkem importy 3.strany (react, materialui, emotion...) od vlastních importů
+ */
 import './App.css';
 import ToDoList from './mocks/basicToDoList.json'; //import json
 
+/**
+ * FEEDBACK: Komentář ti nějak nesedí :D Tohle není CSS, CSS máš nahoře pod importem: "import './App.css'"
+ */
 //CSS 
 import Form from './components/Form/Form';
 
@@ -13,10 +19,16 @@ import Item from './components/molecules/Item'
 function App() {
 
   const[todolist, setTodolist] = useState(ToDoList);//useState(Users)...hook nastavuje defaultní stav
+  /**
+   * FEEDBACK: Dávej si pozor na mezery mezi znaménkem =
+   */
   const[task, setTask]=useState('');
   const[editedTask, setEditedTask] = useState('');
   const[editedID, setEditedID] = useState(0);
 
+  /**
+   * FEEDBACK: Opět chybí mezery mezi závorkou a =, dále mezera mezi > a {
+   */
   const handelAddTaskClicked = ()=>{
     const newTask={
       id: todolist.length +10, //unikatni id pomoci delky
@@ -27,7 +39,9 @@ function App() {
   };
 
 
-
+  /**
+   * FEEDBACK: Naposled upozorňuju na mezery :D Zkus si nainstalovat Prettier, ten by to měl formátovat za tebe
+   */
   const renderToDoList =()=>todolist.map((item)=>{
     return(
       <Item

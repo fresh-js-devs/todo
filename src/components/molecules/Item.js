@@ -2,7 +2,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 import Button from '../atoms/Button'
 
-
+/**
+ * FEEDBACK: Opět, Prettier by pomohl, odsazení je hrozně nepřehledné
+ */
   const Heading = styled.div`
     display: flex;
     justify-content: space-between;
